@@ -9,9 +9,10 @@ import { JwtGuard } from '../auth/guard/jwt.guard';
 export class UserController {
   @UseGuards(JwtGuard)
   @Get('me')
-  getMe(@GetUser() user: User, @GetUser('email') email: string) {
-    console.log(email);
-    console.log(user);
+  getMe(@GetUser() user: User) {
     return user;
   }
+
+  @Patch()
+  editUser() { }
 }
