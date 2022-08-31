@@ -74,26 +74,26 @@ describe('App e2e', () => {
       });
       it('should throw if no body provided', () => {
         return pactum.spec().post('/auth/signin').expectStatus(400);
-        it('should signin', () => {
-          return pactum
-            .spec()
-            .post('/auth/signin')
-            .withBody(dto)
-            .expectStatus(200);
-        });
+      });
+      it('should signin', () => {
+        return pactum
+          .spec()
+          .post('/auth/signin')
+          .withBody(dto)
+          .expectStatus(200);
       });
     });
-    describe('User', () => {
-      describe('Get me', () => { });
-      describe('Edit user', () => { });
+  });
+  describe('User', () => {
+    describe('Get me', () => { });
+    describe('Edit user', () => { });
 
-    });
-    describe('Bookmarks', () => {
-      describe('Create bookmark', () => { });
-      describe('Get bookmarks', () => { });
-      describe('Get bookmark by id', () => { });
-      describe('Eit bookmark', () => { });
-      describe('Delete bookmark', () => { });
-    });
+  });
+  describe('Bookmarks', () => {
+    describe('Create bookmark', () => { });
+    describe('Get bookmarks', () => { });
+    describe('Get bookmark by id', () => { });
+    describe('Eit bookmark', () => { });
+    describe('Delete bookmark', () => { });
   });
 });
